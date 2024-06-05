@@ -11,7 +11,7 @@ const UserItem = ({ id }) => {
 	}, [id]);
 
 	const getUserDetail = async () => {
-		const api = `http://localhost:3001/user/${id}`;
+		const api = `http://localhost:3001/auth/user/${id}`;
 
 		try {
 			const res = await axios(api);
