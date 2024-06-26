@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { replaceName } from './replaceName';
 
-const baseUrl = `https://web-79-server.onrender.com/posts`;
+const baseUrl = `http://localhost:3001/posts`;
 
 const App = () => {
 	const [posts, setPosts] = useState([]);

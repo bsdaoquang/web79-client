@@ -11,7 +11,7 @@ const UploadFile = () => {
 		const formData = new FormData();
 		formData.append('file', file);
 
-		const api = `https://web-79-server.onrender.com/upload`;
+		const api = `http://localhost:3001/upload`;
 		try {
 			const res = await axios(api, {
 				method: 'post',
