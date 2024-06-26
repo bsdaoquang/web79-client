@@ -42,7 +42,7 @@ const TasksScreen = () => {
 			try {
 				const res = await axios({
 					method: task ? 'put' : 'post',
-					url: `http://localhost:3001/tasks/${
+					url: `https://web-79-server.onrender.com/tasks/${
 						task ? `update-task?id=${task._id}` : 'add-new-task'
 					}`,
 					headers: {
@@ -64,7 +64,7 @@ const TasksScreen = () => {
 	};
 
 	const getTasks = async () => {
-		const api = 'http://localhost:3001/tasks/get-tasks';
+		const api = 'https://web-79-server.onrender.com/tasks/get-tasks';
 		try {
 			const res = await axios({
 				url: api,
@@ -82,7 +82,7 @@ const TasksScreen = () => {
 	};
 
 	const removeTask = async (id) => {
-		const api = `http://localhost:3001/tasks/remove-task?id=${id}`;
+		const api = `https://web-79-server.onrender.com/tasks/remove-task?id=${id}`;
 		try {
 			await axios({
 				method: 'delete',

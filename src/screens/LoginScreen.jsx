@@ -13,7 +13,7 @@ const LoginScreen = () => {
 		try {
 			const res = await axios({
 				method: 'post',
-				url: `http://localhost:3001${api}`,
+				url: `https://web-79-server.onrender.com${api}`,
 				headers: {
 					'Content-Type': 'application/json',
 				},
