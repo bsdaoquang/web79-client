@@ -3,14 +3,9 @@
 import { Button, Card, Form, Input } from 'antd';
 import axios from 'axios';
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { addAuth } from '../redux/reducers/authReducer';
 
-const LoginScreen = () => {
+const Register = () => {
 	const [form] = Form.useForm();
-
-	const dispatch = useDispatch();
 
 	const handleLogin = async (values) => {
 		const api = `/auth/login`;
@@ -27,7 +22,7 @@ const LoginScreen = () => {
 
 			if (res && res.status === 200 && res.data) {
 				const data = res.data.data;
-				dispatch(addAuth(data));
+
 				localStorage.setItem('user', JSON.stringify(data));
 			}
 		} catch (error) {
@@ -69,10 +64,6 @@ const LoginScreen = () => {
 								Login
 							</Button>
 						</div>
-
-						<div className='mt-3 text-center'>
-							<Link to={'/register'}>Register</Link>
-						</div>
 					</Card>
 				</div>
 			</div>
@@ -80,4 +71,4 @@ const LoginScreen = () => {
 	);
 };
 
-export default LoginScreen;
+export default Register;
